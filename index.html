@@ -1,63 +1,88 @@
-<!DOCTYPE 
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>👷 Муж на час | Якутия</title>
     <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-            background: linear-gradient(to right, #4facfe, #00f2fe);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
+            min-height: 100vh;
+            padding: 20px;
             color: white;
+            text-align: center;
         }
         .container {
             max-width: 600px;
-            margin: 0 auto;
-            background: rgba(255,255,255,0.1);
-            padding: 40px;
-            border-radius: 20px;
+            margin: 40px auto;
+            background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
+            border-radius: 25px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
         }
         h1 {
             font-size: 3em;
             margin-bottom: 10px;
         }
-        button {
+        .logo {
+            font-size: 5em;
+            margin-bottom: 20px;
+            display: block;
+        }
+        .btn {
+            display: block;
+            width: 100%;
             background: white;
-            color: #4facfe;
+            color: #1a2980;
             border: none;
-            padding: 15px 30px;
-            font-size: 1.2em;
-            border-radius: 10px;
-            margin: 20px;
-            cursor: pointer;
+            padding: 20px;
+            font-size: 1.3em;
+            border-radius: 15px;
+            margin: 15px 0;
             font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .btn:hover {
+            transform: translateY(-5px);
+        }
+        .note {
+            margin-top: 40px;
+            opacity: 0.9;
+            font-size: 0.9em;
+        }
+        @media (max-width: 600px) {
+            .container { padding: 25px; margin: 20px auto; }
+            h1 { font-size: 2.2em; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>👷 Муж на час</h1>
-        <p style="font-size: 1.3em;">Якутия • Услуги мастеров</p>
+        <span class="logo">👷</span>
+        <h1>Муж на час</h1>
+        <p style="font-size: 1.3em; margin-bottom: 40px;">Якутия • Ремонт</p>
         
-        <button onclick="alert('Заказ создан! Мастера свяжутся с вами.')">
+        <button class="btn" onclick="alert('Создание заказа появится завтра!')">
             📝 Создать заказ
         </button>
         
-        <button onclick="alert('Регистрация мастера временно в Telegram: @remont_ykt_bot')">
+        <button class="btn" onclick="alert('Для мастеров: @remont_ykt_bot')">
             🔧 Стать мастером
         </button>
         
-        <p style="margin-top: 40px;">
-            📱 <strong>Как установить:</strong><br>
-            Меню браузера → «Добавить на главный экран»
-        </p>
-        
-        <p style="margin-top: 20px;">
-            🚀 <strong>Telegram:</strong> @remont_ykt_bot
-        </p>
+        <div class="note">
+            <p>📱 <strong>Как установить приложение:</strong></p>
+            <p>Android: Меню браузера → «Добавить на главный экран»</p>
+            <p>iPhone: Поделиться → «На экран "Домой"»</p>
+            <p style="margin-top: 20px;">🚀 <strong>Telegram-бот:</strong> @remont_ykt_bot</p>
+        </div>
     </div>
+    <script>
+        console.log('✅ Приложение "Муж на час" запущено!');
+    </script>
 </body>
 </html>
