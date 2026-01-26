@@ -1,7 +1,63 @@
-# Создайте файл index.html
-echo '<html><body><h1>Муж на час Якутия</h1></body></html>' > index.html
-
-# Добавьте в Git
-git add index.html
-git commit -m "Add main page"
-git push
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👷 Муж на час | Якутия</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: white;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        button {
+            background: white;
+            color: #4facfe;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 10px;
+            margin: 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>👷 Муж на час</h1>
+        <p style="font-size: 1.3em;">Якутия • Нюрба • Услуги мастеров</p>
+        
+        <button onclick="alert('Заказ создан! Мастера свяжутся с вами.')">
+            📝 Создать заказ
+        </button>
+        
+        <button onclick="alert('Регистрация мастера временно в Telegram: @remont_ykt_bot')">
+            🔧 Стать мастером
+        </button>
+        
+        <p style="margin-top: 40px;">
+            📱 <strong>Как установить:</strong><br>
+            Меню браузера → «Добавить на главный экран»
+        </p>
+        
+        <p style="margin-top: 20px;">
+            🚀 <strong>Telegram:</strong> @remont_ykt_bot
+        </p>
+    </div>
+</body>
+</html>
